@@ -20,3 +20,5 @@ const students = [
     notes: [18, 17, 18, 19, 12],
   },
 ];
+
+console.log(students);
