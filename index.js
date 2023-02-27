@@ -5,7 +5,7 @@ const students = [
   },
   {
     name: "Jane",
-    notes: [17, 18, 20, 13, 15],
+    notes: [17, 18, 20, 16, 15],
   },
   {
     name: "Sophie",
