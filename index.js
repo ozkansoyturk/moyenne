@@ -1,7 +1,7 @@
 const students = [
   {
     name: "John",
-    notes: [1, 20, 18, 19, 12],
+    notes: [1, 17, 18, 19, 12],
   },
   {
     name: "Jane",
