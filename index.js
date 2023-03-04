@@ -16,7 +16,7 @@ const students = [
     notes: [2, 3, 5, 8, 9],
   },
   {
-    name: "Manon",
+    name: "Pedro",
     notes: [18, 17, 18, 19, 13],
   },
 ];
