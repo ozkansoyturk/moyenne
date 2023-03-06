@@ -9,7 +9,7 @@ const students = [
   },
   {
     name: "Sophie",
-    notes: [17, 13, 12, 15, 14],
+    notes: [17, 13, 12, 10, 14],
   },
   {
     name: "Marc",
