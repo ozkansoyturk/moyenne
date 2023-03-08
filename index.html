@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moyenne</title>
   </head>
-  <body>
+  <body style="background-color: black">
     <script>
       const students = [
         {
@@ -19,7 +19,7 @@
         },
         {
           name: "Sophie",
-          notes: [17, 13, 12, 10, 14],
+          notes: [17, 13, 12, 10, 13],
         },
         {
           name: "Marc",
@@ -31,13 +31,50 @@
         },
       ];
 
+      // Cela calcul une moyenne a partir de plusieurs nombres d'un tableau (qui est représenter dans notre cas par notes dans les paramètres) -->
+
       const moyenne = (notes) => {
         let sum = 0;
         for (let note of notes) {
           sum += note;
         }
-        console.log(sum);
+        return sum / notes.length;
       };
+
+      // Cela crée les clés/valeurs moyenne, worst et best directement dans le tableau students -->
+
+      for (let student of students) {
+        student.moyenne = moyenne(student.notes);
+        student.worst = Math.min(...student.notes);
+        student.best = Math.max(...student.notes);
+      }
+
+      // Pour trier mon tableau des meilleurs moyennes aux pires -->
+
+      students.sort((a, b) => b.moyenne - a.moyenne);
+
+      //----------------------------------------------------
+
+      const fomatStudent = (student) => {
+        return `${student.name} avec une moyenne de ${
+          student.moyenne
+        } et sa pire note ${Math.min(...student.notes)}`;
+      };
+
+      console.log(`Top 3 étudiants :
+
+1 : ${fomatStudent(students[0])}
+2 : ${fomatStudent(students[1])}
+3 : ${fomatStudent(students[2])}`);
+
+      // TODO: ou comme cela
+      console.log(`Top 3 étudiants :
+
+1 : ${students[0].name} avec une moyenne de ${students[0].moyenne}
+2 : ${students[1].name} avec une moyenne de ${students[1].moyenne}
+3 : ${students[2].name} avec une moyenne de ${students[2].moyenne}`);
+
+      console.log(students);
     </script>
   </body>
 </html>
