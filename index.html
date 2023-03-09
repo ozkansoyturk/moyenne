@@ -71,9 +71,9 @@
       const formatStudent = (student) => {
         return `${student.name} avec une moyenne de ${
           student.moyenne
-        }, sa pire note : ${Math.min(
-          ...student.notes
-        )}, sa meilleure note : ${Math.max(...student.notes)}`;
+        }, meilleur note (${Math.max(student.best)}), pire note (${
+          student.worst
+        })`;
       };
 
       // afficher dans le dom
